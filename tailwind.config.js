@@ -1,9 +1,18 @@
+import tailwindforms from '@tailwindcss/forms'
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+    presets: [
+        require('./vendor/tallstackui/tallstackui/tailwind.config.js')
+    ],
+    content: [
+        './vendor/tallstackui/tallstackui/src/**/*.php',
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./resources/**/*.vue",
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [tailwindforms],
 }
 
