@@ -8,14 +8,10 @@
                      <!-- Logo -->
                      <a href="javascript:void(0)"
                          class="group inline-flex items-center gap-1.5 text-lg font-bold tracking-wide text-slate-900 hover:text-slate-600">
-                         <svg class="hi-mini hi-banknotes inline-block h-5 w-5 -rotate-45 text-violet-600 transition group-hover:scale-110"
-                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                             aria-hidden="true">
-                             <path fill-rule="evenodd"
-                                 d="M1 4a1 1 0 011-1h16a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4zm12 4a3 3 0 11-6 0 3 3 0 016 0zM4 9a1 1 0 100-2 1 1 0 000 2zm13-1a1 1 0 11-2 0 1 1 0 012 0zM1.75 14.5a.75.75 0 000 1.5c4.417 0 8.693.603 12.749 1.73 1.111.309 2.251-.512 2.251-1.696v-.784a.75.75 0 00-1.5 0v.784a.272.272 0 01-.35.25A49.043 49.043 0 001.75 14.5z"
-                                 clip-rule="evenodd" />
-                         </svg>
-                         <span>Tail<span class="font-normal">Bank</span></span>
+
+                         <img src="https://www.advancerh.com.br/rn_advance/_lib/img/grp__NM__img__NM__AdvanceRH2021-SC.png"
+                             class="inline-block h-8 w-8 " alt="">
+                         <span>Advance<span class="font-normal">RH</span></span>
                      </a>
                      <!-- END Logo -->
 
@@ -27,16 +23,9 @@
                          </a>
                          <a href="javascript:void(0)"
                              class="group flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-violet-50 hover:text-violet-600 active:border-violet-100">
-                             <span>Accounts</span>
+                             <span>Contas de Usuários</span>
                          </a>
-                         <a href="javascript:void(0)"
-                             class="group flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-violet-50 hover:text-violet-600 active:border-violet-100">
-                             <span>Cards</span>
-                         </a>
-                         <a href="javascript:void(0)"
-                             class="group flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-violet-50 hover:text-violet-600 active:border-violet-100">
-                             <span>Settings</span>
-                         </a>
+
                      </nav>
                      <!-- END Desktop Navigation -->
                  </div>
@@ -78,30 +67,7 @@
                              class="absolute end-0 z-10 mt-2 w-48 rounded-lg shadow-xl ltr:origin-top-right rtl:origin-top-left">
                              <div
                                  class="divide-y divide-slate-100 rounded-lg bg-white ring-1 ring-black ring-opacity-5">
-                                 <div class="space-y-1 p-2.5">
-                                     <a role="menuitem" href="javascript:void(0)"
-                                         class="group flex items-center justify-between gap-2 rounded-lg px-2.5 py-2 text-sm font-medium text-slate-700 hover:bg-violet-50 hover:text-violet-800">
-                                         <svg class="hi-mini hi-user-circle inline-block h-5 w-5 flex-none opacity-25 group-hover:opacity-50"
-                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                             aria-hidden="true">
-                                             <path fill-rule="evenodd"
-                                                 d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A6.483 6.483 0 0010 16.5a6.483 6.483 0 004.793-2.11A5.99 5.99 0 0010 12z"
-                                                 clip-rule="evenodd" />
-                                         </svg>
-                                         <span class="grow">Account</span>
-                                     </a>
-                                     <a role="menuitem" href="javascript:void(0)"
-                                         class="group flex items-center justify-between gap-2 rounded-lg px-2.5 py-2 text-sm font-medium text-slate-700 hover:bg-violet-50 hover:text-violet-800">
-                                         <svg class="hi-mini hi-cog-6-tooth inline-block h-5 w-5 flex-none opacity-25 group-hover:opacity-50"
-                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                             aria-hidden="true">
-                                             <path fill-rule="evenodd"
-                                                 d="M7.84 1.804A1 1 0 018.82 1h2.36a1 1 0 01.98.804l.331 1.652a6.993 6.993 0 011.929 1.115l1.598-.54a1 1 0 011.186.447l1.18 2.044a1 1 0 01-.205 1.251l-1.267 1.113a7.047 7.047 0 010 2.228l1.267 1.113a1 1 0 01.206 1.25l-1.18 2.045a1 1 0 01-1.187.447l-1.598-.54a6.993 6.993 0 01-1.929 1.115l-.33 1.652a1 1 0 01-.98.804H8.82a1 1 0 01-.98-.804l-.331-1.652a6.993 6.993 0 01-1.929-1.115l-1.598.54a1 1 0 01-1.186-.447l-1.18-2.044a1 1 0 01.205-1.251l1.267-1.114a7.05 7.05 0 010-2.227L1.821 7.773a1 1 0 01-.206-1.25l1.18-2.045a1 1 0 011.187-.447l1.598.54A6.993 6.993 0 017.51 3.456l.33-1.652zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                                                 clip-rule="evenodd" />
-                                         </svg>
-                                         <span class="grow">Settings</span>
-                                     </a>
-                                 </div>
+
                                  <div class="space-y-1 p-2.5">
                                      <form onsubmit="return false;">
                                          <button type="submit" role="menuitem"
@@ -113,7 +79,7 @@
                                                      d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
                                                      clip-rule="evenodd" />
                                              </svg>
-                                             <span class="grow">Sign out</span>
+                                             <span class="grow">Sair</span>
                                          </button>
                                      </form>
                                  </div>
@@ -161,16 +127,9 @@
                      </a>
                      <a href="javascript:void(0)"
                          class="group flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-violet-50 hover:text-violet-600 active:border-violet-100">
-                         <span>Accounts</span>
+                         <span>Contas de Usuários</span>
                      </a>
-                     <a href="javascript:void(0)"
-                         class="group flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-violet-50 hover:text-violet-600 active:border-violet-100">
-                         <span>Cards</span>
-                     </a>
-                     <a href="javascript:void(0)"
-                         class="group flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-violet-50 hover:text-violet-600 active:border-violet-100">
-                         <span>Profile</span>
-                     </a>
+
                  </nav>
              </div>
              <!-- END Mobile Navigation -->
