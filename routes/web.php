@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\{ClientsController, DashboardController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [DashboardController::class, 'index']);
+Route::get('/clientes', [ClientsController::class, 'index']);
