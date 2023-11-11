@@ -17,12 +17,16 @@
 
                      <!-- Desktop Navigation -->
                      <nav class="hidden items-center gap-1.5 lg:flex">
-                         <a href="javascript:void(0)"
-                             class="group flex items-center gap-2 rounded-lg bg-violet-50 px-2.5 py-1.5 text-sm font-medium text-violet-600">
+                         <a href="{{ route('dashboard') }}" wire:navigate
+                             class="group flex items-center gap-2 rounded-lg
+                             {{ request()->routeIs('dashboard') ? ' bg-violet-50 text-violet-600' : 'text-slate-800 hover:bg-violet-50 hover:text-violet-600' }}
+                               px-2.5 py-1.5 text-sm font-medium hover:bg-violet-50 hover:text-violet-600 ">
                              <span>Dashboard</span>
                          </a>
-                         <a href="javascript:void(0)"
-                             class="group flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-800 hover:bg-violet-50 hover:text-violet-600 active:border-violet-100">
+                         <a href="{{ route('users') }}" wire:navigate
+                             class="group flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm font-medium
+                             {{ request()->routeIs('users') ? ' bg-violet-50 text-violet-600' : 'text-slate-800 hover:bg-violet-50 hover:text-violet-600' }}
+                              hover:bg-violet-50 hover:text-violet-600 active:border-violet-100">
                              <span>Contas de Usuários</span>
                          </a>
 

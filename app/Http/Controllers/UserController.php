@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-class DashboardController extends Controller
+class UserController extends Controller
 {
     public function index(): \Illuminate\View\View
     {
-        return view('dashboard');
+        return view('users');
     }
 }
