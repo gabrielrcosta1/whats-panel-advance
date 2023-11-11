@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{ClientsController, DashboardController};
+use App\Http\Controllers\{ClientsController, DashboardController, UserController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [DashboardController::class, 'index']);
-Route::get('/clientes', [ClientsController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/clientes', [ClientsController::class, 'index'])->name('clients');
+Route::get('/usuarios', [UserController::class, 'index'])->name('users');
