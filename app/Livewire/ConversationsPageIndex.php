@@ -13,7 +13,11 @@ class ConversationsPageIndex extends Component
     public ?string $search = '';
     public function render(): View
     {
-        $conversations = Conversation::where('number', 'like', '%' . $this->search . '%')->paginate(10);
+        $conversations = Conversation::where(function ($query) {
+            $query->where('number', 'like', '%' . $this->search . '%')
+                ->orWhere('name', 'like', '%' . $this->search . '%');
+        })
+            ->paginate(10);
 
         return view('livewire.conversations-page-index', compact('conversations'));
     }
