@@ -199,6 +199,9 @@
             </tbody>
             <!-- END Table Body -->
         </table>
+        <br>
         <!-- END Alternate Responsive Table -->
+        {{ $conversations->links() }}
     </div>
+
 </div>
