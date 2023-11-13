@@ -17,6 +17,7 @@ return new class () extends Migration {
             $table->string('date');
             $table->string('status');
             $table->string('type');
+            $table->string('subject');
             $table->string('user_id')->nullable();
             $table->timestamps();
         });
