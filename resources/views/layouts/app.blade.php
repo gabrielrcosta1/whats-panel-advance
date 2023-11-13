@@ -11,17 +11,6 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
-        input[type=checkbox]:checked+label span:first-of-type {
-            background-color: #10B981;
-            border-color: #10B981;
-            color: #fff;
-        }
-
-        input[type=checkbox]:checked+label span:nth-of-type(2) {
-            text-decoration: line-through;
-            color: #9CA3AF;
-        }
-
         [x-cloak] {
             display: none;
         }
