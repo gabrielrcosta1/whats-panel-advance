@@ -7,6 +7,15 @@ use Livewire\Component;
 
 class Conversation extends Component
 {
+    public ?string $status;
+
+    public function updateStatus(ModelsConversation $conversation): void
+    {
+        $conversation->update([
+            'status' => $this->status,
+        ]);
+    }
+
     public function render(): \Illuminate\Contracts\View\View
     {
         $conversations               = ModelsConversation::all();

@@ -137,10 +137,23 @@
                                 <td class="p-3 text-start"> {{ $conversation->type }}</td>
                                 <td class="p-3 text-start"> {{ $conversation->subject }}</td>
                                 <td class="p-3 font-medium">
-                                    <div
-                                        class="inline-block rounded-full bg-rose-100 px-2 py-1 text-xs font-semibold leading-4 text-rose-800">
-                                        {{ $conversation->status }}
-                                    </div>
+                                    @if ($conversation->status === 'Finalizado')
+                                        <div
+                                            class="inline-block rounded-full bg-green-100 px-2 py-1 text-xs font-semibold leading-4 text-green-800">
+                                            {{ $conversation->status }}
+                                        </div>
+                                    @elseif ($conversation->status === 'Em andamento')
+                                        <div
+                                            class="inline-block rounded-full bg-amber-100 px-2 py-1 text-xs font-semibold leading-4 text-amber-800">
+                                            {{ $conversation->status }}
+                                        </div>
+                                    @else
+                                        <div
+                                            class="inline-block rounded-full bg-red-100 px-2 py-1 text-xs font-semibold leading-4 text-red-800">
+                                            {{ $conversation->status }}
+                                        </div>
+                                    @endif
+
                                 </td>
                                 <td class="p-3 text-start">
 
@@ -196,8 +209,9 @@
                                                             <ul class="space-y-4 mb-4">
                                                                 <li>
                                                                     <input type="radio" id="job-1"
-                                                                        name="job" value="job-1"
-                                                                        class="hidden peer" required>
+                                                                        name="job" value="Finalizado"
+                                                                        wire:model='status' class="hidden peer"
+                                                                        required>
                                                                     <label for="job-1"
                                                                         class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
                                                                         <div class="block">
@@ -214,8 +228,8 @@
                                                                 </li>
                                                                 <li>
                                                                     <input type="radio" id="job-2"
-                                                                        name="job" value="job-2"
-                                                                        class="hidden peer">
+                                                                        name="job" value="Em andamento"
+                                                                        wire:model='status' class="hidden peer">
                                                                     <label for="job-2"
                                                                         class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
                                                                         <div class="block">
@@ -232,8 +246,8 @@
                                                                 </li>
                                                                 <li>
                                                                     <input type="radio" id="job-3"
-                                                                        name="job" value="job-3"
-                                                                        class="hidden peer">
+                                                                        name="job" value="Aguardando"
+                                                                        wire:model='status' class="hidden peer">
                                                                     <label for="job-3"
                                                                         class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
                                                                         <div class="block">
@@ -249,7 +263,7 @@
                                                                     </label>
                                                                 </li>
                                                             </ul>
-                                                            <button
+                                                            <button wire:click="updateStatus({{ $conversation->id }})"
                                                                 class="text-white inline-flex w-full justify-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                                 Salvar
                                                             </button>
