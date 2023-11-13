@@ -158,6 +158,7 @@
                                 <td class="p-3 text-start">
 
                                     <div x-data="{ modalOpen: false }" @keydown.escape.window="modalOpen = false"
+                                        x-on:update-status.window="modalOpen = false"
                                         class="relative z-50 w-auto h-auto">
                                         <button @click="modalOpen=true"
                                             class="group inline-flex items-center gap-1 rounded-lg border border-slate-200 px-2.5 py-1.5 font-medium text-slate-800 hover:border-violet-300 hover:text-violet-800 active:border-slate-200">

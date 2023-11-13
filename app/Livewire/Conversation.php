@@ -19,6 +19,8 @@ class Conversation extends Component
 
         if ($updateResult) {
             $this->toast()->success('Sucesso', 'Status atualizado com sucesso');
+            $this->dispatch('update-status');
+            $this->status = null;
         } else {
             $this->toast()->error('Error!', 'Erro ao atualizar status');
         }
@@ -26,7 +28,9 @@ class Conversation extends Component
 
     public function render(): \Illuminate\Contracts\View\View
     {
-        $conversations               = ModelsConversation::all();
+        $statuses = ['Em andamento', 'Aguardando'];
+
+        $conversations               = ModelsConversation::whereIn('status', $statuses)->get();
         $count                       = ModelsConversation::count();
         $countConversationsNotRead   = ModelsConversation::where('status', 'Aguardando')->count();
         $countConversationsFinalized = ModelsConversation::where('status', 'Finalizadas')->count();
