@@ -28,8 +28,7 @@ class Conversation extends Component
 
     public function render(): \Illuminate\Contracts\View\View
     {
-        $statuses = ['Em andamento', 'Aguardando'];
-
+        $statuses                    = ['Em andamento', 'Aguardando'];
         $conversations               = ModelsConversation::whereIn('status', $statuses)->get();
         $count                       = ModelsConversation::count();
         $countConversationsNotRead   = ModelsConversation::where('status', 'Aguardando')->count();
