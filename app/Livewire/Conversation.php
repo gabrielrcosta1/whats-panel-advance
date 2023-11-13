@@ -4,16 +4,24 @@ namespace App\Livewire;
 
 use App\Models\Conversation as ModelsConversation;
 use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
 class Conversation extends Component
 {
-    public ?string $status;
+    use Interactions;
 
+    public ?string $status;
     public function updateStatus(ModelsConversation $conversation): void
     {
-        $conversation->update([
+        $updateResult = $conversation->update([
             'status' => $this->status,
         ]);
+
+        if ($updateResult) {
+            $this->toast()->success('Sucesso', 'Status atualizado com sucesso');
+        } else {
+            $this->toast()->error('Error!', 'Erro ao atualizar status');
+        }
     }
 
     public function render(): \Illuminate\Contracts\View\View
