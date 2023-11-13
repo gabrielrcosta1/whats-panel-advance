@@ -4,7 +4,7 @@
         class="flex flex-col rounded-lg border border-slate-200 bg-white hover:border-slate-300 active:border-violet-300">
         <div class="flex grow items-center justify-between p-5">
             <dl>
-                <dt class="text-2xl font-bold">{{ $count }}</dt>
+                <dt class="text-2xl font-bold" wire:poll>{{ $count }}</dt>
                 <dd class="text-sm font-medium text-slate-500">
                     Conversas Totais
                 </dd>
@@ -131,7 +131,14 @@
                                 <td class="p-3">
                                     <a href="javascript:void(0)"
                                         class="font-medium text-violet-500 hover:text-violet-700">
-                                        {{ $conversation->number }}</a>
+                                        @php
+                                            $originalString = $conversation->number;
+                                            $phoneNumber = explode('@', $originalString)[0];
+                                            echo $phoneNumber;
+                                        @endphp
+
+
+                                    </a>
                                 </td>
 
                                 <td class="p-3 text-start"> {{ $conversation->type }}</td>
