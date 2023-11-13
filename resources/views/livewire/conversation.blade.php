@@ -4,7 +4,7 @@
         class="flex flex-col rounded-lg border border-slate-200 bg-white hover:border-slate-300 active:border-violet-300">
         <div class="flex grow items-center justify-between p-5">
             <dl>
-                <dt class="text-2xl font-bold" wire:poll>{{ $count }}</dt>
+                <dt class="text-2xl font-bold" wire:poll.15s>{{ $count }}</dt>
                 <dd class="text-sm font-medium text-slate-500">
                     Conversas Totais
                 </dd>

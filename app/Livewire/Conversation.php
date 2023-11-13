@@ -31,7 +31,8 @@ class Conversation extends Component
         $statuses                    = ['Em andamento', 'Aguardando'];
         $conversations               = ModelsConversation::whereIn('status', $statuses)->get();
         $count                       = ModelsConversation::count();
-        $countConversationsNotRead   = date('H:i:s', time());
+        $countConversationsNotRead   = ModelsConversation::where('status', 'Aguardando')->count();
+        $nowValue                    = ModelsConversation::where('status', 'Aguardando')->count();
         $countConversationsFinalized = ModelsConversation::where('status', 'Finalizado')->count();
 
         return view('livewire.conversation', compact('conversations', 'count', 'countConversationsNotRead', 'countConversationsFinalized'));
