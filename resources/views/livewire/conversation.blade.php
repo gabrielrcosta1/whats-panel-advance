@@ -4,7 +4,7 @@
         class="flex flex-col rounded-lg border border-slate-200 bg-white hover:border-slate-300 active:border-violet-300">
         <div class="flex grow items-center justify-between p-5">
             <dl>
-                <dt class="text-2xl font-bold">{{ $count }}</dt>
+                <dt class="text-2xl font-bold" wire:poll>{{ $count }}</dt>
                 <dd class="text-sm font-medium text-slate-500">
                     Conversas Totais
                 </dd>
@@ -131,7 +131,14 @@
                                 <td class="p-3">
                                     <a href="javascript:void(0)"
                                         class="font-medium text-violet-500 hover:text-violet-700">
-                                        {{ $conversation->number }}</a>
+                                        @php
+                                            $originalString = $conversation->number;
+                                            $phoneNumber = explode('@', $originalString)[0];
+                                            echo '<a class="text-violet-500 hover:text-blue-700" href="https://api.whatsapp.com/send?phone=' . $phoneNumber . '" target="_blank">' . $phoneNumber . '</a>';
+                                        @endphp
+
+
+                                    </a>
                                 </td>
 
                                 <td class="p-3 text-start"> {{ $conversation->type }}</td>
@@ -280,11 +287,48 @@
                     </tbody>
                     <!-- END Table Body -->
                 </table>
-                <!-- END Alternate Responsive Table -->
+
+
             </div>
             <!-- END Responsive Table Container -->
 
         </div>
     </div>
-    <!-- END Transactions -->
+    <div x-data="{ showNotification: true }">
+
+        <script>
+            let notification;
+
+            function showNotification() {
+                if (Notification.permission !== 'granted') {
+                    Notification.requestPermission().then(permission => {
+                        if (permission === 'granted') {
+                            createNotification();
+                        }
+                    });
+                } else {
+                    createNotification();
+                }
+            }
+
+            function createNotification() {
+                notification = new Notification('Notificação Cringe!', {
+                    body: 'Vai neymar, eu sei que tu gosta né neymar!!!',
+                    icon: 'https://www.advancerh.com.br/rn_advance/_lib/img/grp__NM__img__NM__AdvanceRH2021-SC.png',
+                    image: 'https://static.vecteezy.com/system/resources/previews/022/653/879/non_2x/fantasy-island-with-waterfalls-3d-illustration-elements-of-this-image-furnished-by-nasa-generative-ai-free-photo.jpg',
+                });
+            }
+
+
+            document.addEventListener('livewire:initialized', () => {
+                @this.on('update-status', (event) => {
+                    showNotification();
+
+                });
+            });
+        </script>
+
+
+    </div>
+
 </div>
