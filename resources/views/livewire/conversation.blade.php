@@ -4,7 +4,7 @@
         class="flex flex-col rounded-lg border border-slate-200 bg-white hover:border-slate-300 active:border-violet-300">
         <div class="flex grow items-center justify-between p-5">
             <dl>
-                <dt class="text-2xl font-bold">$112,768</dt>
+                <dt class="text-2xl font-bold">{{ $count }}</dt>
                 <dd class="text-sm font-medium text-slate-500">
                     Conversas Totais
                 </dd>
@@ -26,7 +26,7 @@
         class="flex flex-col rounded-lg border border-slate-200 bg-white hover:border-slate-300 active:border-emerald-300">
         <div class="flex grow items-center justify-between p-5">
             <dl>
-                <dt class="text-2xl font-bold">$6,840</dt>
+                <dt class="text-2xl font-bold">{{ $countConversationsNotRead }}</dt>
                 <dd class="text-sm font-medium text-slate-500">Conversas não Lidas</dd>
             </dl>
             <div
@@ -46,7 +46,7 @@
         class="flex flex-col rounded-lg border border-slate-200 bg-white hover:border-slate-300 active:border-rose-300">
         <div class="flex grow items-center justify-between p-5">
             <dl>
-                <dt class="text-2xl font-bold">$4,725</dt>
+                <dt class="text-2xl font-bold">{{ $countConversationsFinalized }}</dt>
                 <dd class="text-sm font-medium text-slate-500">Conversas Lidas</dd>
             </dl>
             <div
