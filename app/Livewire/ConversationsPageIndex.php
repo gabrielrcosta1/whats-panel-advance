@@ -11,6 +11,18 @@ class ConversationsPageIndex extends Component
     use WithPagination;
 
     public ?string $search = '';
+
+    public ?string $orderBy = 'created_at';
+
+    public ?string $orderDirection = 'desc';
+
+    public function toggleOrder(): void
+    {
+        $this->orderDirection = $this->orderDirection === 'asc' ? 'desc' : 'asc';
+        $this->orderBy        = 'created_at';
+
+    }
+
     public function render(): View
     {
         $conversations = Conversation::where(function ($query) {
@@ -18,6 +30,7 @@ class ConversationsPageIndex extends Component
                 ->orWhereRaw('number LIKE ?', ['%' . $this->search . '%']);
 
         })
+            ->orderBy($this->orderBy, $this->orderDirection)
             ->paginate(10);
 
         return view('livewire.conversations-page-index', compact('conversations'));
