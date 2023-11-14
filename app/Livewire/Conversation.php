@@ -3,14 +3,27 @@
 namespace App\Livewire;
 
 use App\Models\Conversation as ModelsConversation;
-use Livewire\Component;
+use Livewire\{Component, WithPagination};
 use TallStackUi\Traits\Interactions;
 
 class Conversation extends Component
 {
     use Interactions;
+    use WithPagination;
 
     public ?string $status;
+
+    public ?string $orderBy = 'created_at';
+
+    public ?string $orderDirection = 'desc';
+
+    public function toggleOrder(): void
+    {
+        $this->orderDirection = $this->orderDirection === 'asc' ? 'desc' : 'asc';
+        $this->orderBy        = 'created_at';
+
+    }
+
     public function updateStatus(ModelsConversation $conversation): void
     {
         $updateResult = $conversation->update([
@@ -29,7 +42,7 @@ class Conversation extends Component
     public function render(): \Illuminate\Contracts\View\View
     {
         $statuses                    = ['Em andamento', 'Aguardando'];
-        $conversations               = ModelsConversation::whereIn('status', $statuses)->get();
+        $conversations               = ModelsConversation::whereIn('status', $statuses)->orderBy($this->orderBy, $this->orderDirection)->paginate(10);
         $count                       = ModelsConversation::count();
         $countConversationsNotRead   = ModelsConversation::where('status', 'Aguardando')->count();
         $nowValue                    = ModelsConversation::where('status', 'Aguardando')->count();

@@ -14,8 +14,9 @@ class ConversationsPageIndex extends Component
     public function render(): View
     {
         $conversations = Conversation::where(function ($query) {
-            $query->where('number', 'like', '%' . $this->search . '%')
-                ->orWhere('name', 'like', '%' . $this->search . '%');
+            $query->whereRaw('LOWER(name) LIKE ?', ['%' . strtolower($this->search) . '%'])
+                ->orWhereRaw('number LIKE ?', ['%' . $this->search . '%']);
+
         })
             ->paginate(10);
 
