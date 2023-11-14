@@ -11,7 +11,7 @@ class Conversation extends Component
     use Interactions;
     use WithPagination;
 
-    public ?string $status;
+    public ?string $status = '';
 
     public ?string $orderBy = 'created_at';
 
@@ -26,17 +26,22 @@ class Conversation extends Component
 
     public function updateStatus(ModelsConversation $conversation): void
     {
-        $updateResult = $conversation->update([
-            'status' => $this->status,
-        ]);
-
-        if ($updateResult) {
-            $this->toast()->success('Sucesso', 'Status atualizado com sucesso');
-            $this->dispatch('update-status');
-            $this->status = null;
+        if ($this->status === '') {
+            $this->toast()->error('Error!', 'Selecione um valor');
         } else {
-            $this->toast()->error('Error!', 'Erro ao atualizar status');
+            $updateResult = $conversation->update([
+                'status' => $this->status,
+            ]);
+
+            if ($updateResult) {
+                $this->toast()->success('Sucesso', 'Status atualizado com sucesso');
+                $this->dispatch('update-status');
+                $this->status = null;
+            } else {
+                $this->toast()->error('Error!', 'Erro ao atualizar status');
+            }
         }
+
     }
 
     public function render(): \Illuminate\Contracts\View\View

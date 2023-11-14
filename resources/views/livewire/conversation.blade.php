@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="border-t border-slate-100 px-5 py-3 text-xs font-medium text-slate-500">
-            <p>De todas as contas</p>
+            <p>From all accounts</p>
         </div>
     </a>
     <a href="javascript:void(0)"
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="border-t border-slate-100 px-5 py-3 text-xs font-medium text-slate-500">
-            <p>Este mês</p>
+            <p>This month</p>
         </div>
     </a>
     <a href="javascript:void(0)"
@@ -59,7 +59,7 @@
             </div>
         </div>
         <div class="border-t border-slate-100 px-5 py-3 text-xs font-medium text-slate-500">
-            <p>Este mês</p>
+            <p>This month</p>
         </div>
     </a>
 
@@ -229,63 +229,48 @@
                                                         <div class="p-4 md:p-5">
                                                             <p class="text-gray-500 dark:text-gray-400 mb-4">Selecione
                                                                 o status:</p>
-                                                            <ul class="space-y-4 mb-4">
-                                                                <li>
-                                                                    <input type="radio" id="job-1"
-                                                                        name="job" value="Finalizado"
-                                                                        wire:model='status' class="hidden peer"
-                                                                        required>
-                                                                    <label for="job-1"
-                                                                        class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
-                                                                        <div class="block">
-                                                                            <div class="w-full text-lg font-semibold">
-                                                                                Finalizado</div>
-                                                                            <div
-                                                                                class="w-full text-gray-500 dark:text-gray-400">
-                                                                                Contato Finalizado</div>
-                                                                        </div>
-                                                                        <span class="material-symbols-outlined">
-                                                                            done
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                                <li>
-                                                                    <input type="radio" id="job-2"
-                                                                        name="job" value="Em andamento"
-                                                                        wire:model='status' class="hidden peer">
-                                                                    <label for="job-2"
-                                                                        class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
-                                                                        <div class="block">
-                                                                            <div class="w-full text-lg font-semibold">
-                                                                                Em andamento</div>
-                                                                            <div
-                                                                                class="w-full text-gray-500 dark:text-gray-400">
-                                                                                Contato em andamento</div>
-                                                                        </div>
-                                                                        <span class="material-symbols-outlined">
-                                                                            cycle
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                                <li>
-                                                                    <input type="radio" id="job-3"
-                                                                        name="job" value="Aguardando"
-                                                                        wire:model='status' class="hidden peer">
-                                                                    <label for="job-3"
-                                                                        class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
-                                                                        <div class="block">
-                                                                            <div class="w-full text-lg font-semibold">
-                                                                                Aguardando</div>
-                                                                            <div
-                                                                                class="w-full text-gray-500 dark:text-gray-400">
-                                                                                Aguardando atendimento</div>
-                                                                        </div>
-                                                                        <span class="material-symbols-outlined">
-                                                                            pending
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                            </ul>
+                                                            <div
+                                                                class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                                                                <input
+                                                                    class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                                                                    type="radio" name="flexRadioDefault"
+                                                                    id="radioDefault01" value="Finalizado"
+                                                                    wire:model='status' />
+                                                                <label
+                                                                    class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer"
+                                                                    for="radioDefault01">
+                                                                    Finalizado
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                                                                <input
+                                                                    class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                                                                    type="radio" name="flexRadioDefault"
+                                                                    id="radioDefault03" value="Em andamento"
+                                                                    wire:model='status' />
+                                                                <label
+                                                                    class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer"
+                                                                    for="radioDefault03">
+                                                                    Em andamento
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                                                                <input
+                                                                    class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                                                                    type="radio" name="flexRadioDefault"
+                                                                    id="radioDefault02" value="Aguardando"
+                                                                    wire:model='status' />
+                                                                <label
+                                                                    class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer"
+                                                                    for="radioDefault02">
+                                                                    Aguardando
+                                                                </label>
+                                                            </div>
+
+
+                                                            <br>
                                                             <button wire:click="updateStatus({{ $conversation->id }})"
                                                                 class="text-white inline-flex w-full justify-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                                 Salvar

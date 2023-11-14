@@ -22,6 +22,7 @@
 
 <body>
     <x-toast />
+    <x-dialog />
     <div x-data="{ userDropdownOpen: false, mobileNavOpen: false }">
         <!-- Page Container -->
         <div id="page-container" class="mx-auto flex min-h-screen w-full min-w-[320px] flex-col bg-slate-50">
